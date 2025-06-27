@@ -742,6 +742,34 @@ body {
     display: grid;
     gap: var(--spacing-6);
 }
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-4);
+    border: 2px solid hsl(var(--border));
+    border-radius: var(--radius);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family);
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: hsl(var(--accent));
+    box-shadow: 0 0 0 3px hsl(var(--accent) / 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
 .footer-bottom p {
     color: #6b7280;
     font-size: 0.9rem;
