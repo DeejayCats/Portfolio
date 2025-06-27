@@ -17,6 +17,36 @@ navLinks.forEach(link => {
         navMenu.classList.remove('active');
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const loginForm = document.getElementById("login-form");
+    const logoutSection = document.getElementById("logout");
+    const loginSection = document.getElementById("login");
+
+    // Handle login
+    loginForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Check credentials
+        if (username === "deejay" && password === "admin123") {
+            alert("Login successful!");
+            loginSection.style.display = "none"; // Hide login section
+            logoutSection.style.display = "block"; // Show logout section
+        } else {
+            alert("Invalid username or password.");
+        }
+    });
+
+    // Handle logout
+    document.getElementById("logout-button").addEventListener("click", function() {
+        alert("Logged out successfully!");
+        logoutSection.style.display = "none"; // Hide logout section
+        loginSection.style.display = "block"; // Show login section
+        loginForm.reset(); // Reset the form
+    });
+});
 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
