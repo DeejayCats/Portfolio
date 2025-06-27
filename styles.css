@@ -688,26 +688,60 @@ body {
     color: #f9fafb;
 }
 
-.contact-info p {
-    margin-bottom: 0.5rem;
+/* Contact Section */
+.contact {
+    padding: var(--spacing-20) 0;
+    background-color: hsl(var(--background));
 }
 
-.contact-info a {
-    color: #9ca3af;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-16);
 }
 
-.contact-info a:hover {
-    color: #f9fafb;
+.contact-info {
+    display: grid;
+    gap: var(--spacing-8);
 }
 
-.footer-bottom {
-    border-top: 1px solid #374151;
-    padding-top: 1rem;
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    padding: var(--spacing-6);
+    background-color: hsl(var(--card));
+    border-radius: var(--radius-lg);
+    border: 1px solid hsl(var(--border));
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-item i {
+    font-size: var(--font-size-xl);
+    color: hsl(var(--accent));
+    width: 24px;
     text-align: center;
 }
 
+.contact-item h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-1);
+    color: hsl(var(--foreground));
+}
+
+.contact-item p {
+    color: hsl(var(--muted-foreground));
+}
+
+.contact-form {
+    display: grid;
+    gap: var(--spacing-6);
+}
 .footer-bottom p {
     color: #6b7280;
     font-size: 0.9rem;
